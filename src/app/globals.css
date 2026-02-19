@@ -1,15 +1,26 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
+  /* Brand Colors */
+  --color-primary: #5C7C1E;
+  /* Bright Olive - Buttons/Accents */
+  --color-primary-dark: #405828;
+  /* Deep Olive - Headings/Footer */
+  --color-secondary: #405828;
+  /* Deep Olive - Primary Brand Color (Replacing Blue) */
+  --color-secondary-light: #5C7C1E;
+  /* Bright Olive - Secondary Brand Color */
+  --color-accent: #F5F5F0;
+  --color-accent-dark: #e5e5e5;
+  /* Sand/Beige - Backgrounds */
+  --color-text-main: #333333;
+  --color-text-light: #666666;
+
+  /* Inherited from Next.js */
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +30,32 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  /* Brand Adjustments for Dark Mode */
+  --color-accent: #1f1f1f;
+  --color-accent-dark: #1a1a1a;
+  /* Darker Sand/Beige */
+  --color-text-main: #e5e5e5;
+  --color-text-light: #a3a3a3;
+  --color-gray-dark: #000000;
+  /* Even darker for header in dark mode */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+
+  --color-brand-green: var(--color-primary);
+  --color-brand-green-dark: var(--color-primary-dark);
+  --color-gray-dark: #1a1a1a;
+  /* Dark Gray from reference image */
+}
+
+.font-script {
+  font-family: var(--font-script);
 }

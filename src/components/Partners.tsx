@@ -1,0 +1,33 @@
+export default function Partners() {
+    // Placeholder layout for logos
+    const partners = [
+        "partners-providers/bellavista.png",
+        "partners-providers/dracaena.png",
+        "partners-providers/galagents.png",
+        "partners-providers/gps-suites.png",
+        "partners-providers/julio-verne.png",
+        "partners-providers/kuyana.svg",
+        "partners-providers/mandari.png",
+        "partners-providers/napowc.png",
+        "partners-providers/rosedelco.png",
+        "partners-providers/sani-lodge.png",
+
+    ];
+
+    return (
+        <section className="py-20  bg-[var(--color-accent-dark)]">
+            <div className="container mx-auto px-4 text-center">
+                <h3 className="text-2xl font-serif font-bold text-gray-500 mb-12 uppercase tracking-widest">
+                    Partners &amp; Providers
+                </h3>
+                <div className="flex flex-wrap justify-center items-center gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    {partners.map((partner, i) => (
+                        <div key={i} className="h-16 w-32 bg-gray-300 rounded flex items-center justify-center text-xs text-gray-400 font-bold p-2">
+                            <img src={partner} alt="Partner Logo" className="w-full h-full object-contain" />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
