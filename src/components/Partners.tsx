@@ -5,7 +5,7 @@ export default function Partners() {
         "partners-providers/dracaena.png",
         "partners-providers/galagents.png",
         "partners-providers/gps-suites.png",
-        "partners-providers/julio-verne.png",
+        "partners-providers/julio-verne.svg",
         "partners-providers/kuyana.svg",
         "partners-providers/mandari.png",
         "partners-providers/napowc.png",
@@ -20,9 +20,9 @@ export default function Partners() {
                 <h3 className="text-2xl font-serif font-bold text-gray-500 mb-12 uppercase tracking-widest">
                     Partners &amp; Providers
                 </h3>
-                <div className="flex flex-wrap justify-center items-center gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div className="flex flex-wrap justify-center items-center gap-12 transition-all duration-500">
                     {partners.map((partner, i) => (
-                        <div key={i} className="h-16 w-32 bg-gray-300 rounded flex items-center justify-center text-xs text-gray-400 font-bold p-2">
+                        <div key={i} className="h-20 w-36 bg-[var(--color-accent)] rounded-lg shadow-sm flex items-center justify-center p-4 hover:scale-105 transition-transform duration-300">
                             <img src={partner} alt="Partner Logo" className="w-full h-full object-contain" />
                         </div>
                     ))}

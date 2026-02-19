@@ -3,10 +3,11 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { cruises } from '@/data/cruises';
+import { cruises, Cruise } from '@/data/cruises';
 import CruiseFilters from './CruiseFilters';
 import CruiseGrid from './CruiseGrid';
 import Pagination from '@/components/ui/Pagination';
+import Modal from '@/components/ui/Modal';
 
 const ITEMS_PER_PAGE = 8;
 const CATEGORIES = ['All', 'Luxury', 'First Class', 'Tourist'];
@@ -81,6 +82,19 @@ function CruisesBrowserContent() {
         currentPage * ITEMS_PER_PAGE
     );
 
+    // Modal state
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalUrl, setModalUrl] = useState('');
+
+    const handleCruiseClick = (cruise: Cruise) => {
+        if (cruise.id === 'elite') {
+            setModalUrl('https://www.elitegalapagoscruise.com');
+            setIsModalOpen(true);
+        } else {
+            router.push(`/galapagos/cruises/${cruise.slug}`);
+        }
+    };
+
     return (
         <>
             <CruiseFilters
@@ -96,7 +110,10 @@ function CruisesBrowserContent() {
                     Showing {paginatedCruises.length} of {filteredCruises.length} cruises
                 </div>
 
-                <CruiseGrid cruises={paginatedCruises} />
+                <CruiseGrid
+                    cruises={paginatedCruises}
+                    onCruiseClick={handleCruiseClick}
+                />
 
                 <Pagination
                     currentPage={currentPage}
@@ -113,6 +130,16 @@ function CruisesBrowserContent() {
                     </Link>
                 </div>
             </section>
+
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <iframe
+                    src={modalUrl}
+                    className="w-full h-full border-0"
+                    title="Elite Galapagos Cruise"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                />
+            </Modal>
         </>
     );
 }

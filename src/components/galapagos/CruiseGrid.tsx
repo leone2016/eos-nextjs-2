@@ -4,9 +4,10 @@ import CruiseCard from './CruiseCard';
 
 interface CruiseGridProps {
     cruises: Cruise[];
+    onCruiseClick?: (cruise: Cruise) => void;
 }
 
-export default function CruiseGrid({ cruises }: CruiseGridProps) {
+export default function CruiseGrid({ cruises, onCruiseClick }: CruiseGridProps) {
     if (cruises.length === 0) {
         return (
             <div className="col-span-full text-center py-20 text-gray-500 dark:text-gray-400">
@@ -18,7 +19,11 @@ export default function CruiseGrid({ cruises }: CruiseGridProps) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cruises.map((cruise) => (
-                <CruiseCard key={cruise.id} cruise={cruise} />
+                <CruiseCard
+                    key={cruise.id}
+                    cruise={cruise}
+                    onClick={onCruiseClick}
+                />
             ))}
         </div>
     );
