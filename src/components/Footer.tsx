@@ -70,8 +70,8 @@ export default function Footer() {
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="text-center text-gray-500 text-xs font-light tracking-widest pt-2 border-t border-white/5">
-                    <p className="text-[10px]">&copy; EOS Ecuador Travel. Developed by ECUADOR QUEST Company.&reg;</p>
+                <div className="text-center text-gray-400 text-xs font-light tracking-widest pt-2 border-t border-white/5">
+                    <p className="text-xs">&copy; EOS Ecuador Travel. Developed by ECUADOR QUEST Company.&reg;</p>
                 </div>
             </div>
         </footer>

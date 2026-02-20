@@ -137,14 +137,18 @@ export default function Header() {
                         </ul>
 
                         {/* Search Bar */}
-                        <div className="relative group">
+                        <div className="relative group flex items-center">
                             <input
                                 type="text"
                                 placeholder="Search..."
-                                className="bg-white/10 border border-white/20 rounded-full py-2 pl-4 pr-10 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[var(--color-brand-green)] focus:ring-1 focus:ring-[var(--color-brand-green)] transition-all w-32 focus:w-48"
+                                aria-label="Search tours and cruises"
+                                className="bg-white/10 border border-white/20 rounded-full py-2.5 pl-4 pr-12 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[var(--color-brand-green)] focus:ring-1 focus:ring-[var(--color-brand-green)] transition-all w-32 focus:w-48 h-11"
                             />
-                            <button className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[var(--color-brand-green)]">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                            <button
+                                className="absolute right-0 top-0 h-11 w-11 flex items-center justify-center text-gray-400 hover:text-[var(--color-brand-green)] transition-colors"
+                                aria-label="Submit search"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                                 </svg>
                             </button>
@@ -153,7 +157,7 @@ export default function Header() {
                         {/* Theme Toggle Button */}
                         <button
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            className="p-2 rounded-full bg-white/10 text-white hover:bg-[var(--color-brand-green)] transition-colors"
+                            className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[var(--color-brand-green)] transition-colors ml-2"
                             aria-label="Toggle Theme"
                             suppressHydrationWarning
                         >
@@ -167,10 +171,10 @@ export default function Header() {
                     </div>
 
                     {/* Mobile Menu Button Info */}
-                    <div className="flex items-center gap-4 lg:hidden">
+                    <div className="flex items-center gap-2 lg:hidden">
                         <button
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+                            className="w-11 h-11 flex items-center justify-center text-white hover:bg-white/10 rounded-lg transition-colors"
                             aria-label="Toggle Theme Mobile"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 block dark:hidden">
@@ -182,7 +186,7 @@ export default function Header() {
                         </button>
 
                         <button
-                            className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors z-50 relative"
+                            className="w-11 h-11 flex items-center justify-center text-white hover:bg-white/10 rounded-lg transition-colors z-50 relative"
                             aria-label="Toggle menu"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >

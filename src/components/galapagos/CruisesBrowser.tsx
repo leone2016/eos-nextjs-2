@@ -8,6 +8,7 @@ import CruiseFilters from './CruiseFilters';
 import CruiseGrid from './CruiseGrid';
 import Pagination from '@/components/ui/Pagination';
 import Modal from '@/components/ui/Modal';
+import InquiryForm from '@/components/InquiryForm';
 
 const ITEMS_PER_PAGE = 8;
 const CATEGORIES = ['All', 'Luxury', 'First Class', 'Tourist'];
@@ -82,9 +83,13 @@ function CruisesBrowserContent() {
         currentPage * ITEMS_PER_PAGE
     );
 
-    // Modal state
+    // Modal state for Elite
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalUrl, setModalUrl] = useState('');
+
+    // Modal state for Booking
+    const [isBookModalOpen, setIsBookModalOpen] = useState(false);
+    const [selectedCruise, setSelectedCruise] = useState<Cruise | null>(null);
 
     const handleCruiseClick = (cruise: Cruise) => {
         if (cruise.id === 'elite') {
@@ -93,6 +98,11 @@ function CruisesBrowserContent() {
         } else {
             router.push(`/galapagos/cruises/${cruise.slug}`);
         }
+    };
+
+    const handleBookClick = (cruise: Cruise) => {
+        setSelectedCruise(cruise);
+        setIsBookModalOpen(true);
     };
 
     return (
@@ -113,6 +123,7 @@ function CruisesBrowserContent() {
                 <CruiseGrid
                     cruises={paginatedCruises}
                     onCruiseClick={handleCruiseClick}
+                    onBookClick={handleBookClick}
                 />
 
                 <Pagination
@@ -131,6 +142,7 @@ function CruisesBrowserContent() {
                 </div>
             </section>
 
+            {/* External Site Modal (Elite) */}
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
                 <iframe
                     src={modalUrl}
@@ -139,6 +151,13 @@ function CruisesBrowserContent() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                 />
+            </Modal>
+
+            {/* Booking Form Modal */}
+            <Modal isOpen={isBookModalOpen} onClose={() => setIsBookModalOpen(false)}>
+                <div className="max-w-4xl mx-auto w-full p-2 h-full overflow-y-auto custom-scrollbar">
+                    <InquiryForm selectedBoat={selectedCruise?.name} />
+                </div>
             </Modal>
         </>
     );

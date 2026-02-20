@@ -5,9 +5,10 @@ import CruiseCard from './CruiseCard';
 interface CruiseGridProps {
     cruises: Cruise[];
     onCruiseClick?: (cruise: Cruise) => void;
+    onBookClick?: (cruise: Cruise) => void;
 }
 
-export default function CruiseGrid({ cruises, onCruiseClick }: CruiseGridProps) {
+export default function CruiseGrid({ cruises, onCruiseClick, onBookClick }: CruiseGridProps) {
     if (cruises.length === 0) {
         return (
             <div className="col-span-full text-center py-20 text-gray-500 dark:text-gray-400">
@@ -23,6 +24,7 @@ export default function CruiseGrid({ cruises, onCruiseClick }: CruiseGridProps) 
                     key={cruise.id}
                     cruise={cruise}
                     onClick={onCruiseClick}
+                    onBookClick={onBookClick}
                 />
             ))}
         </div>

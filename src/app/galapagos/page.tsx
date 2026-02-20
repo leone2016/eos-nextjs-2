@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Galapagos Islands Vacation Packages",
         description: "Discover the enchanted Galapagos Islands with EOS Ecuador.",
-        images: ["/galapagos_kicker_rock.png"], // Assumed path after moving artifact
+        images: ["/galapagos_kicker_rock.png"],
     },
 };
 
@@ -25,101 +25,122 @@ export default function GalapagosPage() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-[var(--background)]">
             <JsonLd data={jsonLd} />
 
             {/* Hero Section */}
-            <section className="relative h-[70vh] flex items-center justify-center">
-                <div className="absolute inset-0 z-0">
+            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0 scale-105">
                     <Image
                         src="/galapagos_kicker_rock.png"
                         alt="Kicker Rock Galapagos Sunset"
                         fill
                         priority
-                        className="object-cover"
+                        className="object-cover opacity-90"
                         sizes="100vw"
-                        quality={90}
+                        quality={95}
                     />
-                    <div className="absolute inset-0 bg-black/30" />
+                    <div className="absolute inset-0 bg-black/40 z-10" />
                 </div>
-                <div className="relative z-10 text-center text-white px-4">
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 drop-shadow-lg tracking-wide">GALAPAGOS</h1>
-                    <p className="text-xl md:text-2xl font-light tracking-widest uppercase">The Enchanted Islands</p>
+
+                {/* Floating Elements */}
+                <div className="absolute top-1/4 right-10 w-64 h-64 bg-[var(--color-primary)]/10 rounded-full blur-[100px] animate-pulse"></div>
+                <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-[var(--color-primary)]/5 rounded-full blur-[120px] animate-pulse transition-all duration-1000"></div>
+
+                <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+                    <span className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase mb-8 animate-fade-in shadow-xl">
+                        Nature Unveiled
+                    </span>
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold mb-8 drop-shadow-2xl tracking-tight leading-[0.9]">
+                        Galapagos <br />
+                        <span className="italic text-[var(--color-primary)]">Enchanted</span>
+                    </h1>
                 </div>
+
+                {/* Bottom Fade Transition */}
+                <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[var(--background)] to-transparent z-10"></div>
             </section>
 
             {/* Intro Text */}
-            <section className="py-20 bg-[var(--background)]">
+            <section className="relative py-24 -mt-12 z-20">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <h2 className="text-3xl font-serif text-[var(--color-secondary)] mb-6">Discover wildlife, nature, and stunning views in this unforgettable enchanted place.</h2>
-                    <p className="text-gray-600 leading-relaxed text-lg">
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-8 leading-tight">
+                        Discover wildlife and stunning views in this <span className="text-[var(--color-primary)]">unforgettable place</span>.
+                    </h2>
+                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-xl font-light">
                         Scout the Galapagos Islands with EOS through cruise or land-based tours; choose the style that suits you best. Enjoy competitive rates tailored to your budget, with special pricing based on availability and group size. We're committed to making your journey seamless, enriching, and unforgettable.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed text-lg mt-4 font-medium text-[var(--color-brand-green)]">
-                        Don't miss the chance to explore this extraordinary destination, your adventure awaits!
                     </p>
                 </div>
             </section>
 
             {/* Categories Grid */}
-            <section className="py-10 pb-24 bg-[var(--background)]">
+            <section className="py-20 pb-40">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
                         {/* Cruises */}
-                        <Link href="/galapagos/cruises" className="group block bg-[var(--background)] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden transform hover:-translate-y-2 bg-white dark:bg-[#1a1a1a] rounded-xl shadow-lg dark:shadow-[0_4px_20px_0_rgba(255,255,255,0.08)] overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col border border-transparent dark:border-white/5">
-                            <div className="relative h-80 w-full overflow-hidden">
+                        <Link href="/galapagos/cruises" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
+                            <div className="relative h-96 w-full overflow-hidden">
                                 <Image
                                     src="/galapagos_luxury_yacht.png"
                                     alt="Galapagos Cruises"
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
-                                    <h3 className="text-3xl font-serif font-bold text-white">Cruises</h3>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
+                                    <div>
+                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">Cruises</h3>
+                                        <div className="h-1 w-12 bg-[var(--color-primary)] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="p-8">
-                                <p className="text-gray-600 mb-4">Explore the Galapagos on a breathtaking cruise with options for every budget and personalized guidance.</p>
-                                <span className="text-[var(--color-brand-green)] font-bold uppercase tracking-widest text-sm group-hover:underline">Explore Cruises →</span>
+                            <div className="p-10">
+                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Explore the Galapagos on a breathtaking cruise with options for every budget and personalized guidance.</p>
+                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs">Explore Cruises →</span>
                             </div>
                         </Link>
 
                         {/* Land Based */}
-                        <Link href="/galapagos/land-based" className="group block bg-[var(--background)] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden transform hover:-translate-y-2 bg-white dark:bg-[#1a1a1a] rounded-xl shadow-lg dark:shadow-[0_4px_20px_0_rgba(255,255,255,0.08)] overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col border border-transparent dark:border-white/5">
-                            <div className="relative h-80 w-full overflow-hidden">
+                        <Link href="/galapagos/land-based" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
+                            <div className="relative h-96 w-full overflow-hidden">
                                 <Image
                                     src="/galapagos_sea_lion_beach_relaxed.png"
                                     alt="Galapagos Land Based Tours"
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
-                                    <h3 className="text-3xl font-serif font-bold text-white">Land Based</h3>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
+                                    <div>
+                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">Land Based</h3>
+                                        <div className="h-1 w-12 bg-[var(--color-primary)] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="p-8">
-                                <p className="text-gray-600 mb-4">Scout the Galapagos on a land-based journey with expert guidance and handpicked accommodations.</p>
-                                <span className="text-[var(--color-brand-green)] font-bold uppercase tracking-widest text-sm group-hover:underline">Explore Tours →</span>
+                            <div className="p-10">
+                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Scout the Galapagos on a land-based journey with expert guidance and handpicked accommodations.</p>
+                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs">Explore Tours →</span>
                             </div>
                         </Link>
 
                         {/* Diving */}
-                        <Link href="/galapagos/diving" className="group block bg-[var(--background)] shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden transform hover:-translate-y-2 bg-white dark:bg-[#1a1a1a] rounded-xl shadow-lg dark:shadow-[0_4px_20px_0_rgba(255,255,255,0.08)] overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col border border-transparent dark:border-white/5">
-                            <div className="relative h-80 w-full overflow-hidden">
+                        <Link href="/galapagos/diving" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
+                            <div className="relative h-96 w-full overflow-hidden">
                                 <Image
                                     src="/galapagos_hammerhead_shark.png"
                                     alt="Galapagos Diving Tours - Hammerhead Sharks"
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
-                                    <h3 className="text-3xl font-serif font-bold text-white">Diving</h3>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
+                                    <div>
+                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">Diving</h3>
+                                        <div className="h-1 w-12 bg-[var(--color-primary)] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="p-8">
-                                <p className="text-gray-600 mb-4">Discover the underwater wonders of the marine reserve with our specialized diving cruises.</p>
-                                <span className="text-[var(--color-brand-green)] font-bold uppercase tracking-widest text-sm group-hover:underline">Explore Diving →</span>
+                            <div className="p-10">
+                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Discover the underwater wonders of the marine reserve with our specialized diving cruises.</p>
+                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs">Explore Diving →</span>
                             </div>
                         </Link>
 
