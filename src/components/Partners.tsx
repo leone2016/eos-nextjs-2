@@ -26,7 +26,7 @@ export default function Partners() {
                     {partners.map((partner, i) => {
                         const partnerName = partner.split('/').pop()?.split('.')[0] || 'Partner';
                         return (
-                            <div key={i} className="h-20 w-36 bg-[var(--color-accent)] rounded-lg shadow-sm flex items-center justify-center p-4 hover:scale-105 transition-transform duration-300">
+                            <div key={i} className="h-20 w-36 bg-[var(--color-accent-darker)] rounded-lg shadow-sm flex items-center justify-center p-4 hover:scale-105 transition-transform duration-300">
                                 <Image
                                     src={`/${partner}`}
                                     alt={`${partnerName} Logo`}

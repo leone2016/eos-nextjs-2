@@ -19,6 +19,14 @@ const destinations = [
         accent: "from-green-500/20"
     },
     {
+        title: "Custom Tours",
+        subtitle: "Tailored Adventures",
+        description: "Create your own adventure with our custom tour packages.",
+        image: "/custom-tours.png",
+        link: "/custom-tours",
+        accent: "from-purple-500/20"
+    },
+    {
         title: "Volcanoes",
         subtitle: "Climbing & Trekking",
         description: "Conquer the Avenue of the Volcanoes and witness the majestic power of the Ecuadorian Andes.",
@@ -45,15 +53,15 @@ export default function DestinationPreview() {
                                 className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center`}
                             >
                                 {/* Image side with unique frame */}
-                                <div className="w-full lg:w-3/5 relative group">
+                                <div className="w-full lg:w-1/2 relative group">
                                     <div className={`absolute -inset-4 bg-gradient-to-br ${dest.accent} to-transparent rounded-[3rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
-                                    <div className="relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                                    <div className="relative h-[300px] md:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
                                         <Image
                                             src={dest.image}
                                             alt={dest.title}
                                             fill
                                             className="object-cover transition-transform duration-[2s] group-hover:scale-110"
-                                            sizes="(max-width: 1024px) 100vw, 60vw"
+                                            sizes="(max-width: 1024px) 100vw, 50vw"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                                     </div>
@@ -62,7 +70,7 @@ export default function DestinationPreview() {
                                 </div>
 
                                 {/* Content side */}
-                                <div className="w-full lg:w-2/5 space-y-8">
+                                <div className="w-full lg:w-1/2 space-y-8">
                                     <div className="space-y-4">
                                         <p className="text-xs font-bold tracking-[0.4em] uppercase text-[var(--color-primary-text)]">
                                             {dest.subtitle}

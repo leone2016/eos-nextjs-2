@@ -103,18 +103,8 @@ export default function ContactPage() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                                             </svg>
                                         )
-                                    },
-                                    {
-                                        title: 'Our Office',
-                                        subtitle: 'Quito, Ecuador',
-                                        value: 'Av. Jerónimo Carrion E8-132',
-                                        icon: (
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                                            </svg>
-                                        )
                                     }
+
                                 ].map((item, idx) => (
                                     <div key={idx} className="group relative p-6 bg-white dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/5 transition-all duration-300 hover:shadow-2xl hover:shadow-[var(--color-primary)]/5">
                                         <div className="flex items-center gap-5">
@@ -124,7 +114,7 @@ export default function ContactPage() {
                                             <div>
                                                 <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 mb-0.5">{item.subtitle}</h3>
                                                 {item.link ? (
-                                                    <a href={item.link} className="text-lg font-bold text-[var(--color-secondary)] dark:text-gray-200 hover:text-[var(--color-primary)] transition-colors">
+                                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-lg font-bold text-[var(--color-secondary)] dark:text-gray-200 hover:text-[var(--color-primary)] transition-colors">
                                                         {item.value}
                                                     </a>
                                                 ) : (

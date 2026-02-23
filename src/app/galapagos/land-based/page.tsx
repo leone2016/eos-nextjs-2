@@ -46,8 +46,16 @@ export default function GalapagosLandBasedPage() {
                 </div>
             </section>
 
+            {/* SEO Description Section */}
+            <section className="container mx-auto px-4 pt-16 pb-8 text-center max-w-4xl">
+                <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-6">Discover Our Premier Galapagos Land Based Tours</h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-light">
+                    Experience the magic of the archipelago at your own pace with our meticulously crafted <strong>Galapagos land based tours</strong> and <strong>island hopping packages</strong>. Perfect for travelers who prefer sleeping on solid ground, these tours combine comfortable stays in sustainable eco-lodges and boutique hotels with thrilling daily excursions. Explore iconic sites across Santa Cruz, Isabela, and San Cristobal islands, engage with local communities, relax on pristine white-sand beaches, and enjoy close encounters with the spectacular local wildlife. Our diverse land-based itineraries offer flexibility, comfort, and an authentic way to immerse yourself in the natural wonders of the <strong>Galapagos Islands</strong>.
+                </p>
+            </section>
+
             {/* Tour List */}
-            <section className="container mx-auto px-4 py-16">
+            <section className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {landBasedTours.map((tour) => (
                         <div key={tour.id} className="bg-white dark:bg-[#1a1a1a] rounded-xl shadow-lg dark:shadow-[0_4px_20px_0_rgba(255,255,255,0.08)] overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col border border-transparent dark:border-white/5">

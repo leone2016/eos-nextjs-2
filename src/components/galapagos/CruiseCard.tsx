@@ -5,22 +5,13 @@ import { Cruise } from '@/data/cruises';
 interface CruiseCardProps {
     cruise: Cruise;
     onClick?: (cruise: Cruise) => void;
-    onBookClick?: (cruise: Cruise) => void;
 }
 
-export default function CruiseCard({ cruise, onClick, onBookClick }: CruiseCardProps) {
+export default function CruiseCard({ cruise, onClick }: CruiseCardProps) {
     const handleDetailClick = (e: React.MouseEvent) => {
         if (onClick) {
             e.preventDefault();
             onClick(cruise);
-        }
-    };
-
-    const handleBookClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (onBookClick) {
-            onBookClick(cruise);
         }
     };
 
@@ -52,12 +43,12 @@ export default function CruiseCard({ cruise, onClick, onBookClick }: CruiseCardP
                     >
                         View Details
                     </Link>
-                    <button
-                        onClick={handleBookClick}
-                        className="flex-1 px-4 py-2 bg-[var(--color-primary)] text-[var(--color-primary-fg)] text-xs font-bold rounded-full hover:bg-[var(--color-primary-dark)] transition-all uppercase tracking-wider shadow-md hover:shadow-lg transform active:scale-95"
+                    <Link
+                        href={`/contact?subject=Inquiry about the ${encodeURIComponent(cruise.name)} Cruise`}
+                        className="flex-1 px-4 py-2 bg-[var(--color-primary)] text-[var(--color-primary-fg)] text-xs font-bold rounded-full hover:bg-[var(--color-primary-dark)] transition-all uppercase tracking-wider shadow-md hover:shadow-lg text-center flex items-center justify-center transform active:scale-95"
                     >
                         Book
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

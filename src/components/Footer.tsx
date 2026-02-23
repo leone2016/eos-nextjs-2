@@ -36,7 +36,7 @@ export default function Footer() {
                         <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-1">Contact Us</h3>
                         <div className="space-y-1 text-gray-200 text-xs font-light">
                             <p>
-                                Phone:
+                                WhatsApp:
                                 <a
                                     href="https://wa.me/593986945555"
                                     target="_blank"
@@ -53,18 +53,23 @@ export default function Footer() {
                     {/* Column 3: Social Icons (2 cols - aligned right on desktop) */}
                     <div className="md:col-span-2 flex flex-col items-center md:items-end justify-start gap-2">
                         {/* Facebook */}
-                        <a href="https://facebook.com/eosecuador" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61588367465192" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="Facebook">
                             Facebook
                         </a>
 
                         {/* Instagram */}
-                        <a href="https://instagram.com/eosecuador" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="Instagram">
+                        <a href="https://www.instagram.com/eos_ecuador/" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="Instagram">
                             Instagram
                         </a>
 
                         {/* TikTok */}
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="TikTok">
+                        <a href="https://www.tiktok.com/@eosecuador" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="TikTok">
                             TikTok
+                        </a>
+
+                        {/* TipAdvisor */}
+                        <a href="https://www.tripadvisor.co/Attraction_Review-g294308-d4403439-Reviews-Eos_Ecuador-Quito_Pichincha_Province.html" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform duration-300 text-gray-300 hover:text-white text-xs font-light" aria-label="TripAdvisor">
+                            TipAdvisor
                         </a>
                     </div>
 

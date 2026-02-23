@@ -2,7 +2,9 @@ import Hero from "@/components/Hero";
 import JsonLd from "@/components/JsonLd";
 import MissionSection from "@/components/MissionSection";
 import DestinationPreview from "@/components/DestinationPreview";
+import EcuadorExperiences from "@/components/EcuadorExperiences";
 import Partners from "@/components/Partners";
+import TripAdvisorReviews from "@/components/TripAdvisorReviews";
 
 export default function Home() {
   const jsonLd = {
@@ -23,8 +25,8 @@ export default function Home() {
     },
     "description": "Eos Ecuador is a travel agency dedicated to promoting responsible and sustainable tourism in Galapagos and Ecuador.",
     "sameAs": [
-      "https://www.facebook.com/eosecuador",
-      "https://www.instagram.com/eosecuador"
+      "https://www.facebook.com/profile.php?id=61588367465192",
+      "https://www.instagram.com/eos_ecuador/"
     ]
   };
 
@@ -34,6 +36,8 @@ export default function Home() {
       <Hero />
       <MissionSection />
       <DestinationPreview />
+      <EcuadorExperiences />
+      <TripAdvisorReviews />
       <Partners />
     </div>
   );

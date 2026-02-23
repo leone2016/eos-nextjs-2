@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
 import type { Metadata } from 'next';
 
@@ -71,49 +72,49 @@ export default function AmazonPage() {
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
 
-                        {/* Lodges */}
-                        <div className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
+                        {/* Deep Jungle Lodge */}
+                        <Link href="/amazon/deep-jungle-lodge" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
                             <div className="relative h-[28rem] w-full overflow-hidden">
                                 <Image
                                     src="/amazon.png"
-                                    alt="Amazon Lodges"
+                                    alt="Deep Jungle Lodge"
                                     fill
                                     className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
                                     <div>
-                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">Eco-Lodges</h3>
+                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">Deep Jungle Lodge</h3>
                                         <div className="h-1 w-12 bg-[var(--color-primary)] rounded-full group-hover:w-24 transition-all duration-500"></div>
                                     </div>
                                 </div>
                             </div>
                             <div className="p-10">
-                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Stay in sustainable lodges deep in the jungle, offering comfort without compromising the environment.</p>
-                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs cursor-pointer">View Lodges →</span>
+                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Immerse yourself deep within the primeval rainforest. Perfect for adventurous travelers seeking the most pristine and remote wildlife encounters.</p>
+                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs cursor-pointer group-hover:text-[var(--color-brand-green-dark)] transition-colors">Explore Options →</span>
                             </div>
-                        </div>
+                        </Link>
 
-                        {/* Cruises */}
-                        <div className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
+                        {/* Accessible Lodge */}
+                        <Link href="/amazon/accessible-lodge" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
                             <div className="relative h-[28rem] w-full overflow-hidden">
                                 <Image
                                     src="/amazon.png"
-                                    alt="Amazon River Cruises"
+                                    alt="Accessible Lodge"
                                     fill
                                     className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
                                     <div>
-                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">River Cruises</h3>
+                                        <h3 className="text-4xl font-serif font-bold text-white mb-2">Accessible Lodge</h3>
                                         <div className="h-1 w-12 bg-[var(--color-primary)] rounded-full group-hover:w-24 transition-all duration-500"></div>
                                     </div>
                                 </div>
                             </div>
                             <div className="p-10">
-                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Navigate the majestic Amazon river in style, exploring remote areas accessible only by water.</p>
-                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs cursor-pointer">View Cruises →</span>
+                                <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Experience the Amazon without sacrificing comfort. Easy to reach and well-equipped, ideal for families and travelers looking for a relaxing jungle retreat.</p>
+                                <span className="text-[var(--color-primary)] font-bold uppercase tracking-[0.2em] text-xs cursor-pointer group-hover:text-[var(--color-brand-green-dark)] transition-colors">Explore Options →</span>
                             </div>
-                        </div>
+                        </Link>
 
                     </div>
                 </div>

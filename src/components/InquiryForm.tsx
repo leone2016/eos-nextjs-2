@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface InquiryFormProps {
     selectedBoat?: string;
@@ -55,6 +55,21 @@ export default function InquiryForm({ selectedBoat }: InquiryFormProps) {
         howFound: '',
         newsletter: false,
     });
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const params = new URLSearchParams(window.location.search);
+            const subject = params.get('subject');
+            if (subject) {
+                const cleanSubject = subject.replace(/^Inquiry about (the )?/, '');
+                // eslint-disable-next-line react-hooks/set-state-in-effect
+                setFormData(prev => ({
+                    ...prev,
+                    comments: `I'm interested in booking the ${cleanSubject}. `
+                }));
+            }
+        }
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target;
@@ -222,9 +237,9 @@ export default function InquiryForm({ selectedBoat }: InquiryFormProps) {
                             {[
                                 { name: 'contactPerson', label: 'Full Name *', placeholder: 'Leonardo Da Vinci', type: 'text', required: true },
                                 { name: 'email', label: 'Email Address *', placeholder: 'leo@traveler.com', type: 'email', required: true },
-                                { name: 'phone', label: 'Secure Phone', placeholder: '+593 9 888 7777', type: 'tel' },
-                                { name: 'referenceName', label: 'Reference Code', placeholder: 'Optional', type: 'text' },
-                                { name: 'agencyName', label: 'Travel Agency', placeholder: 'If applicable', type: 'text' }
+                                { name: 'phone', label: 'Secure Phone', placeholder: '+593 9 888 7777', type: 'tel' }
+
+
                             ].map((field) => (
                                 <div key={field.name} className="space-y-1">
                                     <label htmlFor={field.name} className={labelClasses}>{field.label}</label>
@@ -241,30 +256,6 @@ export default function InquiryForm({ selectedBoat }: InquiryFormProps) {
                                     />
                                 </div>
                             ))}
-
-                            <div className="space-y-1">
-                                <label htmlFor="howFound" className={labelClasses}>Discovery Channel</label>
-                                <div className="relative">
-                                    <select
-                                        id="howFound"
-                                        name="howFound"
-                                        value={formData.howFound}
-                                        onChange={handleChange}
-                                        className={`${inputClasses} appearance-none cursor-pointer pr-10`}
-                                    >
-                                        <option value="">Choose one</option>
-                                        <option value="google">Google Explorer</option>
-                                        <option value="social">Social Discovery</option>
-                                        <option value="friend">Personal Referral</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[var(--color-primary)]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
