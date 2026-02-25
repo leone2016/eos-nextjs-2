@@ -48,7 +48,7 @@ export default function GalapagosLandBasedPage() {
 
             {/* SEO Description Section */}
             <section className="container mx-auto px-4 pt-16 pb-8 text-center max-w-4xl">
-                <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-6">Discover Our Premier Galapagos Land Based Tours</h2>
+                <h2 className="text-3xl font-serif font-bold text-(--color-secondary) dark:text-white mb-6">Discover Our Premier Galapagos Land Based Tours</h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-light">
                     Experience the magic of the archipelago at your own pace with our meticulously crafted <strong>Galapagos land based tours</strong> and <strong>island hopping packages</strong>. Perfect for travelers who prefer sleeping on solid ground, these tours combine comfortable stays in sustainable eco-lodges and boutique hotels with thrilling daily excursions. Explore iconic sites across Santa Cruz, Isabela, and San Cristobal islands, engage with local communities, relax on pristine white-sand beaches, and enjoy close encounters with the spectacular local wildlife. Our diverse land-based itineraries offer flexibility, comfort, and an authentic way to immerse yourself in the natural wonders of the <strong>Galapagos Islands</strong>.
                 </p>
@@ -66,19 +66,19 @@ export default function GalapagosLandBasedPage() {
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[var(--color-secondary)] uppercase tracking-wide">
+                                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-(--color-secondary) uppercase tracking-wide">
                                     {tour.duration}
                                 </div>
                             </div>
-                            <div className="p-6 flex flex-col flex-grow text-gray-800 dark:text-gray-200">
-                                <h3 className="text-2xl font-serif font-bold text-[var(--color-secondary)] mb-2 line-clamp-2 h-16">{tour.title}</h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-grow">{tour.description}</p>
+                            <div className="p-6 flex flex-col grow text-gray-800 dark:text-gray-200">
+                                <h3 className="text-2xl font-serif font-bold text-(--color-secondary) mb-2 line-clamp-2 h-16">{tour.title}</h3>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 grow">{tour.description}</p>
 
                                 <div className="border-t border-gray-100 dark:border-gray-800 pt-4 flex items-center justify-between">
-                                    <span className="text-[var(--color-brand-green)] font-bold text-lg">{tour.price}</span>
+                                    <span className="text-brand-green font-bold text-lg">{tour.price}</span>
                                     <Link
                                         href={`/galapagos/land-based/${tour.slug}`}
-                                        className="px-6 py-2 bg-[var(--color-brand-green)] text-white text-sm font-bold rounded-full hover:bg-[var(--color-brand-green-dark)] transition-colors"
+                                        className="px-6 py-2 bg-brand-green text-white text-sm font-bold rounded-full hover:bg-brand-green-dark transition-colors"
                                     >
                                         View Itinerary
                                     </Link>
@@ -89,7 +89,7 @@ export default function GalapagosLandBasedPage() {
                 </div>
 
                 <div className="flex justify-center mt-16">
-                    <Link href="/galapagos" className="text-[var(--color-brand-green)] hover:underline flex items-center gap-2">
+                    <Link href="/galapagos" className="text-brand-green hover:underline flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>

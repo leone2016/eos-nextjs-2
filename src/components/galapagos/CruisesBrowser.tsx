@@ -110,7 +110,7 @@ function CruisesBrowserContent() {
             />
 
             <section className="container mx-auto px-4 py-12">
-                <div className="mb-8 text-[var(--color-text-muted)] text-sm">
+                <div className="mb-8 text-(--color-text-muted) text-sm">
                     Showing {paginatedCruises.length} of {filteredCruises.length} cruises
                 </div>
 
@@ -126,7 +126,7 @@ function CruisesBrowserContent() {
                 />
 
                 <div className="flex justify-center mt-16">
-                    <Link href="/galapagos" className="text-[var(--color-brand-green)] hover:underline flex items-center gap-2">
+                    <Link href="/galapagos" className="text-(--color-brand-green) hover:underline flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>

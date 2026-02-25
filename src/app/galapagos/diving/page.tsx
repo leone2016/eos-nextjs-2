@@ -41,7 +41,7 @@ export default function GalapagosDivingPage() {
 
             {/* SEO Description Section */}
             <section className="container mx-auto px-4 pt-16 pb-8 text-center max-w-4xl">
-                <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-6">Unforgettable Galapagos Liveaboard Diving Cruises</h2>
+                <h2 className="text-3xl font-serif font-bold text-(--color-secondary) dark:text-white mb-6">Unforgettable Galapagos Liveaboard Diving Cruises</h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-light">
                     Plunge into one of the world&apos;s most spectacular marine reserves with our specialized <strong>Galapagos diving cruises</strong>. Designed for passionate scuba divers, our liveaboard expeditions take you to remote, world-renowned dive sites such as Darwin and Wolf Islands. Experience the thrill of swimming alongside massive schools of hammerhead sharks, playful sea lions, majestic manta rays, and unique marine iguanas. Our expert dive masters ensure a safe, exhilarating, and unforgettable underwater adventure. Discover why the <strong>Galapagos Marine Reserve</strong> is consistently ranked as a top global diving destination and book your ultimate scuba diving holiday today.
                 </p>
@@ -51,7 +51,7 @@ export default function GalapagosDivingPage() {
             <section className="container mx-auto px-4 py-8">
                 <p className="text-center text-gray-500 italic">Content for Diving cruises coming next...</p>
                 <div className="flex justify-center mt-8">
-                    <Link href="/galapagos" className="text-[var(--color-brand-green)] hover:underline">← Back to Galapagos</Link>
+                    <Link href="/galapagos" className="text-brand-green hover:underline">← Back to Galapagos</Link>
                 </div>
             </section>
         </div>

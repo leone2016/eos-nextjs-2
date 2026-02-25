@@ -17,7 +17,7 @@ export default function Partners() {
     ];
 
     return (
-        <section className="py-20  bg-[var(--color-accent-dark)]">
+        <section className="py-20 bg-gray-light">
             <div className="container mx-auto px-4 text-center">
                 <h3 className="text-2xl font-serif font-bold text-gray-500 mb-12 uppercase tracking-widest">
                     Partners &amp; Providers
@@ -26,7 +26,7 @@ export default function Partners() {
                     {partners.map((partner, i) => {
                         const partnerName = partner.split('/').pop()?.split('.')[0] || 'Partner';
                         return (
-                            <div key={i} className="h-20 w-36 bg-[var(--color-accent-darker)] rounded-lg shadow-sm flex items-center justify-center p-4 hover:scale-105 transition-transform duration-300">
+                            <div key={i} className="h-20 w-36 bg-(--color-accent-darker) rounded-lg shadow-sm flex items-center justify-center p-4 hover:scale-105 transition-transform duration-300">
                                 <Image
                                     src={`/${partner}`}
                                     alt={`${partnerName} Logo`}

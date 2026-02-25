@@ -49,15 +49,15 @@ export default function EcuadorExperiences() {
     return (
         <section className="py-24 bg-[#f6f5f5] dark:bg-gray-900 relative overflow-hidden">
             {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-[var(--color-accent)]/30 to-transparent dark:from-[var(--color-primary)]/5 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-full h-125 bg-linear-to-b from-(--color-accent)/30 to-transparent dark:from-brand-green/5 pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto text-center mb-20">
-                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-8 tracking-tight">
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-(--color-secondary) dark:text-white mb-8 tracking-tight">
                         Endless Ways to Experience Ecuador
                     </h2>
                     <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-light leading-relaxed">
-                        Whether you want to <strong className="font-semibold text-[var(--color-primary)] dark:text-green-400">cruise the Galapagos islands</strong>, climb active volcanoes, or explore ancient cities—discover the unparalleled biodiversity, breathtaking sceneries, and vibrant cultures that Ecuador offers to every traveler.
+                        Whether you want to <strong className="font-semibold text-brand-green dark:text-green-400">cruise the Galapagos islands</strong>, climb active volcanoes, or explore ancient cities—discover the unparalleled biodiversity, breathtaking sceneries, and vibrant cultures that Ecuador offers to every traveler.
                     </p>
                 </div>
 
@@ -67,13 +67,13 @@ export default function EcuadorExperiences() {
                         return (
                             <article
                                 key={index}
-                                className="group bg-gray-50 dark:bg-gray-800/80 p-8 rounded-[2rem] border border-gray-100 dark:border-gray-700/50 hover:bg-white dark:hover:bg-gray-800 hover:shadow-2xl hover:shadow-[var(--color-primary)]/5 transition-all duration-500 hover:-translate-y-2 overflow-hidden relative"
+                                className="group bg-gray-50 dark:bg-gray-800/80 p-8 rounded-4xl border border-gray-100 dark:border-gray-700/50 hover:bg-white dark:hover:bg-gray-800 hover:shadow-2xl hover:shadow-(--color-primary)/5 transition-all duration-500 hover:-translate-y-2 overflow-hidden relative"
                             >
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className={`w-16 h-16 rounded-2xl ${exp.bgColor} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-inner`}>
                                         <Icon className={`w-8 h-8 ${exp.color}`} />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[var(--color-primary)] dark:group-hover:text-green-400 transition-colors">
+                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-brand-green dark:group-hover:text-green-400 transition-colors">
                                         {exp.title}
                                     </h3>
                                 </div>
@@ -87,12 +87,12 @@ export default function EcuadorExperiences() {
                 </div>
 
                 {/* Highlight Section for Biodiversity */}
-                <div className="mt-20 max-w-5xl mx-auto bg-[var(--color-secondary)] dark:bg-gray-800 rounded-[2.5rem] p-10 md:p-14 shadow-2xl overflow-hidden relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                <div className="mt-20 max-w-5xl mx-auto bg-(--color-secondary) dark:bg-gray-800 rounded-[2.5rem] p-10 md:p-14 shadow-2xl overflow-hidden relative group">
+                    <div className="absolute inset-0 bg-linear-to-r from-brand-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
                     <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
                         <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center shrink-0 backdrop-blur-sm">
-                            <Leaf className="w-10 h-10 text-[var(--color-primary)]" />
+                            <Leaf className="w-10 h-10 text-brand-green" />
                         </div>
                         <div>
                             <h3 className="text-3xl font-bold text-white mb-4 font-serif">A World of Biodiversity Awaits</h3>

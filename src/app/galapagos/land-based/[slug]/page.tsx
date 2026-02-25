@@ -63,7 +63,7 @@ export default async function TourPage({ params }: Props) {
                     />
                     <div className="absolute inset-0 bg-black/40" />
                 </div>
-                <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 bg-gradient-to-t from-black/80 to-transparent">
+                <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 bg-linear-to-t from-black/80 to-transparent">
                     <div className="container mx-auto">
                         <span className="text-teal-400 font-bold uppercase tracking-wider text-sm mb-2 block">Land Based Tour</span>
                         <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-2">{tour.title}</h1>
@@ -85,13 +85,13 @@ export default async function TourPage({ params }: Props) {
             <div className="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-12">
                 {/* Main Content */}
                 <div className="lg:w-2/3">
-                    <h2 className="text-2xl font-serif font-bold text-[var(--color-secondary)] mb-6">Itinerary</h2>
+                    <h2 className="text-2xl font-serif font-bold text-(--color-secondary) mb-6">Itinerary</h2>
 
                     <div className="space-y-6">
                         {tour.itinerary.map((day) => (
                             <div key={day.day} className="border border-gray-100 rounded-xl p-6 hover:shadow-md transition-shadow">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-[var(--color-brand-green)] text-white rounded-full flex items-center justify-center font-bold text-lg">
+                                    <div className="flex-shrink-0 w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center font-bold text-lg">
                                         {day.day}
                                     </div>
                                     <div>
@@ -125,7 +125,7 @@ export default async function TourPage({ params }: Props) {
                 {/* Sidebar */}
                 <div className="lg:w-1/3 space-y-8">
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 sticky top-24">
-                        <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-4">Included</h3>
+                        <h3 className="text-xl font-bold text-(--color-secondary) mb-4">Included</h3>
                         <ul className="space-y-2 mb-6">
                             {tour.included.map((inc, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
@@ -137,7 +137,7 @@ export default async function TourPage({ params }: Props) {
                             ))}
                         </ul>
 
-                        <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-4">Not Included</h3>
+                        <h3 className="text-xl font-bold text-(--color-secondary) mb-4">Not Included</h3>
                         <ul className="space-y-2 mb-8">
                             {tour.notIncluded.map((exc, i) => (
                                 <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
@@ -151,7 +151,7 @@ export default async function TourPage({ params }: Props) {
 
                         <Link
                             href="/contact"
-                            className="block w-full text-center py-4 bg-[var(--color-brand-green)] text-white font-bold rounded-lg hover:bg-[var(--color-brand-green-dark)] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                            className="block w-full text-center py-4 bg-brand-green text-white font-bold rounded-lg hover:bg-brand-green-dark transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                         >
                             Book This Tour
                         </Link>

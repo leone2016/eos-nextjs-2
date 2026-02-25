@@ -48,7 +48,7 @@ export default function GalapagosCruisesPage() {
 
             {/* SEO Description Section */}
             <section className="container mx-auto px-4 py-16 text-center max-w-4xl">
-                <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-6">Experience the Best Galapagos Luxury Cruises</h2>
+                <h2 className="text-3xl font-serif font-bold text-(--color-secondary) dark:text-white mb-6">Experience the Best Galapagos Luxury Cruises</h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-light">
                     Embark on a once-in-a-lifetime journey with our exclusive <strong>Galapagos luxury cruises</strong>. Navigate through the legendary archipelago aboard top-tier yachts and ecological catamarans designed for ultimate comfort and minimal environmental impact. Our curated <strong>Galapagos Islands cruise itineraries</strong> offer unparalleled opportunities to witness unique wildlife, including giant tortoises, marine iguanas, and blue-footed boobies, led by expert naturalist guides. Whether you are looking for a spectacular family adventure, a romantic getaway, or a specialized wildlife expedition, our small-ship cruises provide an intimate and comprehensive exploration of this magnificent UNESCO World Heritage site.
                 </p>

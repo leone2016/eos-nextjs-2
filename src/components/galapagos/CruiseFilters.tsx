@@ -24,8 +24,8 @@ export default function CruiseFilters({
                             key={cat}
                             onClick={() => onCategoryChange(cat)}
                             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${selectedCategory === cat
-                                ? 'bg-[var(--color-brand-green)] text-[var(--color-primary-fg)] border-[var(--color-brand-green)]'
-                                : 'bg-white dark:bg-transparent text-gray-600 dark:text-gray-300 border-gray-200 dark:border-white/20 hover:border-[var(--color-brand-green)] hover:text-[var(--color-brand-green)]'
+                                ? 'bg-brand-green text-brand-green-fg border-brand-green'
+                                : 'bg-white dark:bg-transparent text-gray-600 dark:text-gray-300 border-gray-200 dark:border-white/20 hover:border-brand-green hover:text-brand-green'
                                 }`}
                         >
                             {cat}
@@ -38,7 +38,7 @@ export default function CruiseFilters({
                         placeholder="Search cruises..."
                         value={searchQuery}
                         onChange={(e) => onSearchChange(e.target.value)}
-                        className="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 bg-white dark:bg-transparent text-gray-800 dark:text-white focus:outline-none focus:border-[var(--color-brand-green)] focus:ring-1 focus:ring-[var(--color-brand-green)] transition-all placeholder-gray-400 dark:placeholder-gray-500"
+                        className="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 bg-white dark:bg-transparent text-gray-800 dark:text-white focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-all placeholder-gray-400 dark:placeholder-gray-500"
                     />
                 </div>
             </div>

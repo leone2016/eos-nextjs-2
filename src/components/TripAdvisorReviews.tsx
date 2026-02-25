@@ -61,11 +61,11 @@ export default function TripAdvisorReviews() {
     return (
         <section className="py-32 bg-background relative overflow-hidden">
             {/* Dynamic Background Elements */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[var(--color-primary)]/5 to-transparent blur-3xl rounded-full translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-green-500/5 to-transparent blur-3xl rounded-full -translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-brand-green/5 to-transparent blur-3xl rounded-full translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-1/2 h-full bg-linear-to-r from-green-500/5 to-transparent blur-3xl rounded-full -translate-x-1/2" />
 
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none dark:opacity-[0.05]">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_2px_2px,rgba(0,0,0,0.1)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_2px_2px,rgba(0,0,0,0.1)_1px,transparent_0)] bg-size-[40px_40px]"></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -74,13 +74,13 @@ export default function TripAdvisorReviews() {
                         <span className="w-2 h-2 rounded-full bg-[#00aa6c] animate-pulse"></span>
                         Testimonials
                     </p>
-                    <h2 className="text-5xl md:text-7xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-8 tracking-tight">
+                    <h2 className="text-5xl md:text-7xl font-serif font-bold text-(--color-secondary) dark:text-white mb-8 tracking-tight">
                         What Our Travelers Say
                     </h2>
 
                     {/* Premium TripAdvisor Rating Badge */}
                     <div className="group relative inline-flex items-center gap-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl px-8 py-4 rounded-2xl shadow-2xl shadow-green-900/5 border border-white/20 dark:border-gray-700 hover:scale-105 transition-all duration-500 cursor-pointer">
-                        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <div className="flex flex-col items-start relative z-10">
                             <span className="font-extrabold text-2xl text-gray-900 dark:text-white tracking-tight">Tripadvisor</span>
                             <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">Excellent 4.8 out of 5</span>
@@ -103,7 +103,7 @@ export default function TripAdvisorReviews() {
                             className="group relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl p-10 rounded-[2.5rem] shadow-xl shadow-gray-200/50 dark:shadow-none border border-white/50 dark:border-gray-700/50 flex flex-col hover:-translate-y-4 hover:shadow-2xl hover:shadow-[#00aa6c]/10 dark:hover:shadow-[#00aa6c]/5 transition-all duration-500"
                             style={{ transitionDelay: `${i * 100}ms` }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-white/0 dark:from-white/5 dark:to-transparent rounded-[2.5rem] pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-linear-to-br from-white/40 to-white/0 dark:from-white/5 dark:to-transparent rounded-[2.5rem] pointer-events-none"></div>
 
                             <Quote className="absolute top-8 right-8 w-16 h-16 text-gray-100 dark:text-gray-700/50 rotate-180 transition-transform duration-500 group-hover:scale-110 group-hover:text-[#00aa6c]/10" />
 
@@ -117,7 +117,7 @@ export default function TripAdvisorReviews() {
                                 &quot;{review.title}&quot;
                             </h3>
 
-                            <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow text-lg leading-relaxed relative z-10 font-light italic">
+                            <p className="text-gray-600 dark:text-gray-300 mb-4 grow text-lg leading-relaxed relative z-10 font-light italic">
                                 {review.text.length > 220 ? review.text.substring(0, 220) + "..." : review.text}
                             </p>
 
@@ -134,7 +134,7 @@ export default function TripAdvisorReviews() {
                             </a>
 
                             <div className="flex items-center gap-5 mt-auto relative z-10 pt-6 border-t border-gray-100 dark:border-gray-700/50">
-                                <div className="w-14 h-14 bg-gradient-to-br from-[#00aa6c] to-[#008855] rounded-full flex items-center justify-center font-bold text-white shadow-lg shadow-[#00aa6c]/30 text-xl group-hover:scale-110 transition-transform duration-500">
+                                <div className="w-14 h-14 bg-linear-to-br from-[#00aa6c] to-[#008855] rounded-full flex items-center justify-center font-bold text-white shadow-lg shadow-[#00aa6c]/30 text-xl group-hover:scale-110 transition-transform duration-500">
                                     {review.name.charAt(0)}
                                 </div>
                                 <div>

@@ -26,14 +26,14 @@ export default function CruiseDecks({ decks }: CruiseDecksProps) {
 
     return (
         <div className="py-12 bg-background">
-            <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] mb-8 text-center">Deck Plans</h2>
+            <h2 className="text-3xl font-serif font-bold text-(--color-secondary) mb-8 text-center">Deck Plans</h2>
 
             <div className="relative max-w-6xl mx-auto px-4">
                 {/* Carousel Container */}
                 <div className="relative bg-white dark:bg-[#1a1a1a] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-800 overflow-hidden">
                     <div className="grid lg:grid-cols-[1.5fr_1fr]">
                         {/* Image Section */}
-                        <div className="relative h-80 lg:h-[500px] bg-gray-50 dark:bg-white/5 flex items-center justify-center p-8">
+                        <div className="relative h-80 lg:h-125 bg-gray-50 dark:bg-white/5 flex items-center justify-center p-8">
                             <Image
                                 src={decks[currentIndex].image}
                                 alt={decks[currentIndex].name}
@@ -44,11 +44,11 @@ export default function CruiseDecks({ decks }: CruiseDecksProps) {
 
                         {/* Content Section */}
                         <div className="p-8 flex flex-col justify-center bg-white dark:bg-[#1a1a1a] text-gray-800 dark:text-gray-100">
-                            <div className="mb-2 text-[var(--color-primary)] font-bold tracking-widest text-sm uppercase">Deck Level</div>
-                            <h3 className="text-3xl font-serif font-bold mb-4 text-[var(--color-secondary)]">
+                            <div className="mb-2 text-brand-green font-bold tracking-widest text-sm uppercase">Deck Level</div>
+                            <h3 className="text-3xl font-serif font-bold mb-4 text-(--color-secondary)">
                                 {decks[currentIndex].name}
                             </h3>
-                            <div className="w-12 h-1 bg-[var(--color-primary)] mb-6"></div>
+                            <div className="w-12 h-1 bg-brand-green mb-6"></div>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8">
                                 {decks[currentIndex].description}
                             </p>
@@ -60,7 +60,7 @@ export default function CruiseDecks({ decks }: CruiseDecksProps) {
                                 <div className="flex gap-3">
                                     <button
                                         onClick={prevSlide}
-                                        className="p-2 rounded-full border border-gray-200 text-gray-400 hover:text-[var(--color-secondary)] hover:border-[var(--color-secondary)] transition-all"
+                                        className="p-2 rounded-full border border-gray-200 text-gray-400 hover:text-(--color-secondary) hover:border-(--color-secondary) transition-all"
                                         aria-label="Previous deck"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
@@ -69,7 +69,7 @@ export default function CruiseDecks({ decks }: CruiseDecksProps) {
                                     </button>
                                     <button
                                         onClick={nextSlide}
-                                        className="p-2 rounded-full border border-gray-200 text-gray-400 hover:text-[var(--color-secondary)] hover:border-[var(--color-secondary)] transition-all"
+                                        className="p-2 rounded-full border border-gray-200 text-gray-400 hover:text-(--color-secondary) hover:border-(--color-secondary) transition-all"
                                         aria-label="Next deck"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
@@ -88,7 +88,7 @@ export default function CruiseDecks({ decks }: CruiseDecksProps) {
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
-                            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-[var(--color-secondary)] w-6' : 'bg-gray-300'
+                            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-(--color-secondary) w-6' : 'bg-gray-300'
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />

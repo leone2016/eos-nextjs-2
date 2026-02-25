@@ -17,7 +17,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
         return (
             <div className="text-center py-20">
                 <h2 className="text-2xl font-serif text-gray-600">Itinerary details coming soon for {lodge.name}.</h2>
-                <Link href="/amazon/deep-jungle-lodge" className="text-[var(--color-brand-green)] hover:underline mt-4 inline-block">
+                <Link href="/amazon/deep-jungle-lodge" className="text-brand-green hover:underline mt-4 inline-block">
                     Back to Amazon Lodges
                 </Link>
             </div>
@@ -50,7 +50,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
                 <div className="container mx-auto px-4 py-8">
                     <button
                         onClick={() => setSelectedItineraryIndex(null)}
-                        className="mb-8 text-[var(--color-brand-green)] font-medium hover:underline flex items-center gap-2"
+                        className="mb-8 text-brand-green font-medium hover:underline flex items-center gap-2"
                     >
                         ← Back to all {lodge.name} itineraries
                     </button>
@@ -85,7 +85,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
                     {lodge.description}
                 </p>
 
-                <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-8">
+                <h2 className="text-3xl font-serif font-bold text-(--color-secondary) dark:text-white mb-8">
                     Lodge Amenities & Features
                 </h2>
 
@@ -95,7 +95,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
                             <ul className="space-y-4">
                                 {lodge.amenities.map((item, index) => (
                                     <li key={index} className="flex items-start gap-4 text-gray-700 dark:text-gray-300 text-md">
-                                        <svg className="w-6 h-6 text-[var(--color-brand-green)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                        <svg className="w-6 h-6 text-brand-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                                         <span className="font-medium">{item}</span>
                                     </li>
                                 ))}
@@ -118,7 +118,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
 
                     return Object.entries(categorized).map(([categoryName, items]) => (
                         <div key={categoryName} className="mb-20">
-                            <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] dark:text-white mb-4 mt-8">
+                            <h2 className="text-3xl font-serif font-bold text-(--color-secondary) dark:text-white mb-4 mt-8">
                                 {categoryName}
                             </h2>
                             <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed max-w-3xl">
@@ -143,18 +143,18 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <div className="p-6 flex flex-col flex-grow">
-                                            <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-2">{itinerary.name}</h3>
+                                        <div className="p-6 flex flex-col grow">
+                                            <h3 className="text-xl font-bold text-(--color-secondary) mb-2">{itinerary.name}</h3>
                                             {itinerary.description && (
-                                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed">{itinerary.description}</p>
+                                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 grow leading-relaxed">{itinerary.description}</p>
                                             )}
                                             <div className="border-t border-gray-100 dark:border-gray-800 pt-4 flex items-center justify-between">
-                                                <Link href="/contact" className="text-[var(--color-primary)] font-bold text-sm hover:underline">
+                                                <Link href="/contact" className="text-brand-green font-bold text-sm hover:underline">
                                                     Contact Us
                                                 </Link>
                                                 <button
                                                     onClick={() => setSelectedItineraryIndex(originalIndex)}
-                                                    className="px-6 py-2 bg-[var(--color-brand-green)] text-white text-sm font-bold rounded-lg hover:bg-[var(--color-brand-green-dark)] transition-colors"
+                                                    className="px-6 py-2 bg-brand-green text-white text-sm font-bold rounded-lg hover:bg-brand-green-dark transition-colors"
                                                 >
                                                     View Itinerary
                                                 </button>
@@ -168,7 +168,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
                 })()}
 
                 <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
-                    <Link href="/amazon/deep-jungle-lodge" className="text-[var(--color-brand-green)] font-medium hover:underline inline-flex items-center gap-2">
+                    <Link href="/amazon/deep-jungle-lodge" className="text-brand-green font-medium hover:underline inline-flex items-center gap-2">
                         ← Back to deep jungle lodges
                     </Link>
                 </div>

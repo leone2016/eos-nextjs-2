@@ -17,7 +17,7 @@ export default function ItineraryTable({ days }: ItineraryTableProps) {
         <div className="w-full">
             <div className="overflow-x-auto rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
                 <table className="w-full text-sm text-left">
-                    <thead className="bg-[var(--color-secondary)] text-white font-serif text-lg tracking-wide border-b border-gray-700">
+                    <thead className="bg-(--color-secondary) text-white font-serif text-lg tracking-wide border-b border-gray-700">
                         <tr>
                             <th className="px-6 py-4 w-1/4">Day</th>
                             <th className="px-6 py-4 w-20 text-center">Time</th>
@@ -32,12 +32,12 @@ export default function ItineraryTable({ days }: ItineraryTableProps) {
                                     <td rowSpan={2} className="px-6 py-4 font-bold text-gray-900 dark:text-white border-r border-gray-100 dark:border-gray-800 align-middle bg-white dark:bg-[#1a1a1a]">
                                         {day.day}
                                     </td>
-                                    <td className="px-6 py-4 font-bold text-[var(--color-secondary)] text-center border-r border-gray-100 dark:border-gray-800">AM</td>
+                                    <td className="px-6 py-4 font-bold text-(--color-secondary) text-center border-r border-gray-100 dark:border-gray-800">AM</td>
                                     <td className="px-6 py-4">{day.am.description}</td>
                                 </tr>
                                 {/* PM Row */}
                                 <tr className="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
-                                    <td className="px-6 py-4 font-bold text-[var(--color-secondary)] text-center border-r border-gray-100 dark:border-gray-800">PM</td>
+                                    <td className="px-6 py-4 font-bold text-(--color-secondary) text-center border-r border-gray-100 dark:border-gray-800">PM</td>
                                     <td className="px-6 py-4">{day.pm.description}</td>
                                 </tr>
                             </React.Fragment>
