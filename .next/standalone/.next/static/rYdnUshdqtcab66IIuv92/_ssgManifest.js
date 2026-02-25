@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002Famazon\u002Fdeep-jungle-lodge\u002F[slug]","\u002Fgalapagos\u002Fcruises\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
