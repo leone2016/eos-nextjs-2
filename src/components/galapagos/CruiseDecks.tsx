@@ -25,7 +25,7 @@ export default function CruiseDecks({ decks }: CruiseDecksProps) {
     };
 
     return (
-        <div className="py-12 bg-[var(--background)]">
+        <div className="py-12 bg-background">
             <h2 className="text-3xl font-serif font-bold text-[var(--color-secondary)] mb-8 text-center">Deck Plans</h2>
 
             <div className="relative max-w-6xl mx-auto px-4">

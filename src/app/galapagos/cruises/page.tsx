@@ -25,13 +25,13 @@ export default function GalapagosCruisesPage() {
     };
 
     return (
-        <div className="min-h-screen pb-20 bg-[var(--background)]">
+        <div className="min-h-screen pb-20 bg-background">
             <JsonLd data={jsonLd} />
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/galapagos_luxury_yacht.png"
+                        src="/galapagos/galapagos-cruises/galapagos_luxury_yacht.png"
                         alt="Galapagos Cruises"
                         fill
                         className="object-cover"

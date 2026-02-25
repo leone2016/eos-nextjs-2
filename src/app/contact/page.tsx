@@ -4,15 +4,15 @@ import InquiryForm from '@/components/InquiryForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Contact Us | EOS Ecuador Travel Agency",
-    description: "Get in touch with EOS Ecuador to plan your trip. Contact us via phone, email, or visit our office in Quito.",
+    title: "Contact Us | Eos Ecuador Travel Agency",
+    description: "Get in touch with Eos Ecuador to plan your trip. Contact us via phone, email, or visit our office in Quito.",
 };
 
 export default function ContactPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "TravelAgency",
-        "name": "EOS Ecuador Travel",
+        "name": "Eos Ecuador Travel",
         "image": "https://eosecuador.com/logo-eos.svg",
         "telephone": "+593 98 694 5555",
         "email": "eos@eosecuador.com",
@@ -25,7 +25,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-[var(--background)] overflow-hidden">
+        <div className="flex flex-col min-h-screen bg-background overflow-hidden">
             <JsonLd data={jsonLd} />
 
             {/* Hero Section */}
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 z-0 scale-105">
                     <Image
                         src="/hero.jpg"
-                        alt="Contact EOS Ecuador"
+                        alt="Contact Eos Ecuador"
                         fill
                         priority
                         className="object-cover opacity-90"

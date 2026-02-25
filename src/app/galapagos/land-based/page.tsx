@@ -25,7 +25,7 @@ export default function GalapagosLandBasedPage() {
     };
 
     return (
-        <div className="min-h-screen pb-20 bg-[var(--background)]">
+        <div className="min-h-screen pb-20 bg-background">
             <JsonLd data={jsonLd} />
             {/* Hero */}
             <section className="relative h-[60vh] flex items-center justify-center">

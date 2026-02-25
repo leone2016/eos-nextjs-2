@@ -19,7 +19,7 @@ export default function DeepJungleLodgePage() {
     };
 
     return (
-        <div className="min-h-screen pb-20 bg-[var(--background)] relative">
+        <div className="min-h-screen pb-20 bg-background relative">
             <JsonLd data={jsonLd} />
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center">

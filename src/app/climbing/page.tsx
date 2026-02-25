@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Climbing & Trekking Tours in Ecuador | Andes Adventures",
-    description: "Summit the majestic volcanoes of the Andes with EOS Ecuador. Guided climbing and trekking tours for all skill levels.",
+    description: "Summit the majestic volcanoes of the Andes with Eos Ecuador. Guided climbing and trekking tours for all skill levels.",
 };
 
 export default function ClimbingPage() {
@@ -18,7 +18,7 @@ export default function ClimbingPage() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-[var(--background)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <JsonLd data={jsonLd} />
 
             {/* Hero Section */}

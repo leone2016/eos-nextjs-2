@@ -92,10 +92,10 @@ export default function Header() {
 
     return (
         <>
-            <header className="bg-[var(--color-gray-dark)] backdrop-blur-md sticky top-0 z-50 border-b border-white/10 shadow-sm transition-all duration-300">
+            <header className="bg-(--color-gray-dark) backdrop-blur-md sticky top-0 z-50 border-b border-white/10 shadow-sm transition-all duration-300">
                 <nav className="container mx-auto px-4 h-20 flex items-center justify-between" aria-label="Main Navigation">
                     <Link href="/" className="flex items-center group p-4 shrink-0">
-                        <Image src="/logo-eos.svg" alt="EOS Ecuador Logo" width={160} height={80} className="w-40 h-20 object-contain" priority />
+                        <Image src="/logo-eos.svg" alt="Eos Ecuador Logo" width={160} height={80} className="w-40 h-20 object-contain" priority />
                     </Link>
 
                     {/* Desktop Menu */}
@@ -114,19 +114,19 @@ export default function Header() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                             </svg>
                                         )}
-                                        <span className={`absolute bottom-2 left-0 h-0.5 bg-[var(--color-brand-green)] transition-all duration-300 ${pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                                        <span className={`absolute bottom-2 left-0 h-0.5 bg-(--color-brand-green) transition-all duration-300 ${pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
                                             }`}></span>
                                     </Link>
 
                                     {/* Dropdown Menu */}
                                     {item.submenu && (
-                                        <div className="absolute top-full left-0 w-48 bg-white dark:bg-[#1a1a1a] shadow-xl rounded-b-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 border-t-2 border-[var(--color-brand-green)]">
+                                        <div className="absolute top-full left-0 w-48 bg-white dark:bg-[#1a1a1a] shadow-xl rounded-b-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 border-t-2 border-(--color-brand-green)">
                                             <ul className="py-2">
                                                 {item.submenu.map((subItem) => (
                                                     <li key={subItem.name}>
                                                         <Link
                                                             href={subItem.path}
-                                                            className="block px-4 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[var(--color-brand-green)] dark:hover:text-[var(--color-brand-green)] transition-colors border-l-2 border-transparent hover:border-[var(--color-brand-green)]"
+                                                            className="block px-4 py-3 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-(--color-brand-green) dark:hover:text-(--color-brand-green) transition-colors border-l-2 border-transparent hover:border-(--color-brand-green)"
                                                         >
                                                             {subItem.name}
                                                         </Link>
@@ -145,10 +145,10 @@ export default function Header() {
                                 type="text"
                                 placeholder="Search..."
                                 aria-label="Search tours and cruises"
-                                className="bg-white/10 border border-white/20 rounded-full py-2.5 pl-4 pr-12 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[var(--color-brand-green)] focus:ring-1 focus:ring-[var(--color-brand-green)] transition-all w-32 focus:w-48 h-11"
+                                className="bg-white/10 border border-white/20 rounded-full py-2.5 pl-4 pr-12 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-(--color-brand-green) focus:ring-1 focus:ring-(--color-brand-green) transition-all w-32 focus:w-48 h-11"
                             />
                             <button
-                                className="absolute right-0 top-0 h-11 w-11 flex items-center justify-center text-gray-400 hover:text-[var(--color-brand-green)] transition-colors"
+                                className="absolute right-0 top-0 h-11 w-11 flex items-center justify-center text-gray-400 hover:text-(--color-brand-green) transition-colors"
                                 aria-label="Submit search"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -160,7 +160,7 @@ export default function Header() {
                         {/* Theme Toggle Button */}
                         <button
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-[var(--color-brand-green)] transition-colors ml-2"
+                            className="w-11 h-11 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-(--color-brand-green) transition-colors ml-2"
                             aria-label="Toggle Theme"
                             suppressHydrationWarning
                         >
@@ -211,7 +211,7 @@ export default function Header() {
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
                 <div
-                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] lg:hidden w-screen h-[100dvh]"
+                    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-100 lg:hidden w-screen h-dvh"
                     onClick={() => setIsMenuOpen(false)}
                     aria-hidden="true"
                 />
@@ -219,23 +219,23 @@ export default function Header() {
 
             {/* Sidebar Drawer */}
             <aside
-                className={`fixed top-0 right-0 inset-y-0 h-[100dvh] w-[80%] max-w-sm bg-[var(--background)] z-[110] shadow-2xl transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 inset-y-0 h-dvh w-[80%] max-w-sm bg-background z-110 shadow-2xl transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
                 {/* Header of Sidebar (Colored) */}
-                <div className="bg-[var(--color-accent)] p-6 shrink-0 flex items-center justify-between">
+                <div className="bg-(--color-accent) p-6 shrink-0 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white overflow-hidden relative">
-                            <Image src="/logo-eos.svg" alt="EOS Ecuador Profile Logo" fill className="object-cover p-1" />
+                            <Image src="/logo-eos.svg" alt="Eos Ecuador Profile Logo" fill className="object-cover p-1" />
                         </div>
                         <div className='dark:hover:bg-white/5'>
-                            <p className="font-bold text-black text-lg text-gray-800 dark:text-gray-200 dark:hover:bg-white/5">EOS Ecuador</p>
-                            <p className="text-black/70 text-sm text-gray-800 dark:text-gray-200 dark:hover:bg-white/5 ">Travel & Adventures</p>
+                            <p className="font-bold text-black text-lg dark:text-gray-200 dark:hover:bg-white/5">Eos Ecuador</p>
+                            <p className="text-black/70 text-sm dark:text-gray-200 dark:hover:bg-white/5 ">Travel & Adventures</p>
                         </div>
                     </div>
                     <button
                         onClick={() => setIsMenuOpen(false)}
-                        className="p-2 text-black/70 hover:text-black transition-colors text-gray-800 dark:text-gray-200 dark:hover:bg-white/5"
+                        className="p-2 text-black/70 hover:text-black transition-colors dark:text-gray-200 dark:hover:bg-white/5"
                         aria-label="Close menu"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -271,7 +271,7 @@ export default function Header() {
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                             </svg>
                                         </button>
-                                        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedMobileSubmenu === item.name ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedMobileSubmenu === item.name ? 'max-h-125 opacity-100' : 'max-h-0 opacity-0'}`}>
                                             <ul className="flex flex-col bg-gray-50/50 dark:bg-white/5">
                                                 {item.submenu.map((subItem) => (
                                                     <li key={subItem.name}>

@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Custom Tailor-Made Tours in Ecuador | Design Your Trip",
-    description: "Create your dream vacation in Ecuador with EOS Ecuador. Fully customizable itineraries tailored to your interests, budget, and schedule.",
+    description: "Create your dream vacation in Ecuador with Eos Ecuador. Fully customizable itineraries tailored to your interests, budget, and schedule.",
 };
 
 export default function CustomToursPage() {
@@ -19,7 +19,7 @@ export default function CustomToursPage() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-[var(--background)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <JsonLd data={jsonLd} />
 
             {/* Hero Section */}

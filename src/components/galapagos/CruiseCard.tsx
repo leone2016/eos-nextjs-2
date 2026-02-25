@@ -16,7 +16,7 @@ export default function CruiseCard({ cruise, onClick }: CruiseCardProps) {
     };
 
     return (
-        <div className="bg-[var(--background)] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full bg-white dark:bg-[#1a1a1a] group">
+        <div className="bg-background rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full bg-white dark:bg-[#1a1a1a] group">
             <Link href={`/galapagos/cruises/${cruise.slug}`} onClick={handleDetailClick} className="block overflow-hidden h-64 relative">
                 <Image
                     src={cruise.image}

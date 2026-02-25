@@ -28,7 +28,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
     if (selectedItineraryIndex !== null) {
         const selectedItinerary = lodge.itineraries[selectedItineraryIndex];
         return (
-            <div className="bg-[var(--background)] min-h-screen pb-20">
+            <div className="bg-background min-h-screen pb-20">
                 {/* Hero Area */}
                 <div className="relative h-[40vh] w-full">
                     <Image
@@ -63,7 +63,7 @@ export default function LodgeDetail({ lodge }: LodgeDetailProps) {
 
     // Default view: Lodge Info & Itinerary Cards
     return (
-        <div className="bg-[var(--background)] min-h-screen pb-20">
+        <div className="bg-background min-h-screen pb-20">
             {/* Hero / Header Area for Lodge */}
             <div className="relative h-[50vh] w-full">
                 <Image

@@ -10,7 +10,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    "name": "EOS Ecuador Travel",
+    "name": "Eos Ecuador Travel",
     "image": "https://eosecuador.com/hero.jpg",
     "@id": "https://eosecuador.com",
     "url": "https://eosecuador.com",

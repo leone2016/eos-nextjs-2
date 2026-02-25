@@ -48,7 +48,7 @@ export default async function TourPage({ params }: Props) {
     };
 
     return (
-        <div className="min-h-screen bg-[var(--background)]">
+        <div className="min-h-screen bg-background">
             <JsonLd data={jsonLd} />
 
             {/* Hero */}

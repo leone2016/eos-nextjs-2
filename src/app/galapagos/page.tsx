@@ -5,12 +5,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Galapagos Islands Vacation Packages | Cruises & Land Based Tours",
-    description: "Discover the enchanted Galapagos Islands with EOS Ecuador. Choose from luxury cruises, island hopping tours, or diving expeditions. Book your sustainable adventure today.",
+    description: "Discover the enchanted Galapagos Islands with Eos Ecuador. Choose from luxury cruises, island hopping tours, or diving expeditions. Book your sustainable adventure today.",
     keywords: ["galapagos islands", "galapagos cruises", "galapagos land based", "diving galapagos", "sustainable tourism galapagos"],
     openGraph: {
         title: "Galapagos Islands Vacation Packages",
-        description: "Discover the enchanted Galapagos Islands with EOS Ecuador.",
-        images: ["/galapagos_kicker_rock.png"],
+        description: "Discover the enchanted Galapagos Islands with Eos Ecuador.",
+        images: ["/galapagos/land-based-tours/galapagos_kicker_rock.png"],
     },
 };
 
@@ -21,18 +21,18 @@ export default function GalapagosPage() {
         "name": "Galapagos Islands",
         "description": "A volcanic archipelago in the Pacific Ocean. It's considered one of the world's foremost destinations for wildlife-viewing.",
         "url": "https://eosecuador.com/galapagos",
-        "image": "https://eosecuador.com/galapagos_kicker_rock.png"
+        "image": "https://eosecuador.com/galapagos/land-based-tours/galapagos_kicker_rock.png"
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-[var(--background)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <JsonLd data={jsonLd} />
 
             {/* Hero Section */}
             <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 scale-105">
                     <Image
-                        src="/galapagos_kicker_rock.png"
+                        src="/galapagos/land-based-tours/galapagos_kicker_rock.png"
                         alt="Kicker Rock Galapagos Sunset"
                         fill
                         priority
@@ -82,13 +82,13 @@ export default function GalapagosPage() {
                         <Link href="/galapagos/cruises" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
                             <div className="relative h-96 w-full overflow-hidden">
                                 <Image
-                                    src="/galapagos_luxury_yacht.png"
+                                    src="/galapagos/galapagos-cruises/galapagos_luxury_yacht.png"
                                     alt="Galapagos Cruises"
                                     fill
                                     className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
+                                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent flex items-end p-10">
                                     <div>
                                         <h3 className="text-4xl font-serif font-bold text-white mb-2">Cruises</h3>
                                         <div className="h-1 w-12 bg-[var(--color-primary)] rounded-full group-hover:w-24 transition-all duration-500"></div>
@@ -97,7 +97,7 @@ export default function GalapagosPage() {
                             </div>
                             <div className="p-10">
                                 <p className="text-gray-500 dark:text-gray-400 mb-6 font-light leading-relaxed">Explore the Galapagos on a breathtaking cruise with options for every budget and personalized guidance.</p>
-                                <span className="text-[var(--color-primary-text)] font-bold uppercase tracking-[0.2em] text-xs">Explore Cruises →</span>
+                                <span className="text-brand-green-text font-bold uppercase tracking-[0.2em] text-xs">Explore Cruises →</span>
                             </div>
                         </Link>
 
@@ -105,7 +105,7 @@ export default function GalapagosPage() {
                         <Link href="/galapagos/land-based" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
                             <div className="relative h-96 w-full overflow-hidden">
                                 <Image
-                                    src="/galapagos_sea_lion_beach_relaxed.png"
+                                    src="/galapagos/land-based-tours/galapagos_sea_lion_beach_relaxed.png"
                                     alt="Galapagos Land Based Tours"
                                     fill
                                     className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
@@ -128,7 +128,7 @@ export default function GalapagosPage() {
                         <Link href="/galapagos/diving" className="group block relative rounded-[2.5rem] overflow-hidden bg-white dark:bg-[#1a1a1a] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.04)] dark:shadow-none">
                             <div className="relative h-96 w-full overflow-hidden">
                                 <Image
-                                    src="/galapagos_hammerhead_shark.png"
+                                    src="/galapagos/land-based-tours/galapagos_hammerhead_shark.png"
                                     alt="Galapagos Diving Tours - Hammerhead Sharks"
                                     fill
                                     className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"

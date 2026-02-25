@@ -1,6 +1,6 @@
 export default function MissionSection() {
     return (
-        <section className="py-24 bg-[var(--background)] transition-colors duration-300 relative overflow-hidden">
+        <section className="py-24 bg-background transition-colors duration-300 relative overflow-hidden">
             {/* Background Accent */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-white/10 to-transparent"></div>
 
@@ -16,7 +16,7 @@ export default function MissionSection() {
 
                 <div className="mx-auto text-lg md:text-xl text-gray-500 dark:text-gray-400 leading-relaxed font-light space-y-8 transition-colors max-w-4xl">
                     <p>
-                        Established in 2008, <span className="font-medium text-[var(--color-secondary)] dark:text-white">EOS Ecuador</span> is more than a travel agency; we are guardians of responsible tourism. We specialize in crafting unforgettable journeys, from private cruises in the Galapagos to deep immersion in the Amazon rainforest.
+                        Established in 2008, <span className="font-medium text-[var(--color-secondary)] dark:text-white">Eos Ecuador</span> is more than a travel agency; we are guardians of responsible tourism. We specialize in crafting unforgettable journeys, from private cruises in the Galapagos to deep immersion in the Amazon rainforest.
                     </p>
                     <p>
                         Our philosophy is built on <span className="italic">personalization and purpose</span>. Each tour is tailored to your vision, allowing you to discover Ecuador&apos;s extraordinary biodiversity while contributing directly to local communities. Join us in exploring the beauty of our country, sustainably.

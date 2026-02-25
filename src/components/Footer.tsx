@@ -77,7 +77,7 @@ export default function Footer() {
 
                 {/* Footer Bottom */}
                 <div className="text-center text-gray-300 text-xs font-light tracking-widest pt-2 border-t border-white/5">
-                    <p className="text-xs">&copy; EOS Ecuador Travel. Developed by ECUADOR QUEST Company.&reg;</p>
+                    <p className="text-xs">&copy; Eos Ecuador Travel. Developed by ECUADOR QUEST Company.&reg;</p>
                 </div>
             </div>
         </footer>

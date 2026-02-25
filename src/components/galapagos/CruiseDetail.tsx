@@ -29,7 +29,7 @@ export default function CruiseDetail({ cruise }: CruiseDetailProps) {
     const selectedItinerary = cruise.itineraries[selectedItineraryIndex];
 
     return (
-        <div className="bg-[var(--background)] min-h-screen pb-20">
+        <div className="bg-background min-h-screen pb-20">
             {/* Hero / Header Area for Cruise */}
             <div className="relative h-[50vh] w-full">
                 <Image

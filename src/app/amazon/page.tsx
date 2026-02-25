@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Amazon Rainforest Tours | Ecuador Jungle Adventures",
-    description: "Explore the Amazon Rainforest with EOS Ecuador. Discover unique wildlife, indigenous cultures, and stay in eco-friendly lodges.",
+    description: "Explore the Amazon Rainforest with Eos Ecuador. Discover unique wildlife, indigenous cultures, and stay in eco-friendly lodges.",
 };
 
 export default function AmazonPage() {
@@ -19,14 +19,14 @@ export default function AmazonPage() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-[var(--background)]">
+        <div className="flex flex-col min-h-screen bg-background">
             <JsonLd data={jsonLd} />
 
             {/* Hero Section */}
             <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 scale-105">
                     <Image
-                        src="/amazon.png"
+                        src="/amazon/amazon.png"
                         alt="Amazon Rainforest Canopy"
                         fill
                         priority

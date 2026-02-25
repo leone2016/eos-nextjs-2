@@ -28,7 +28,7 @@ const reviews = [
         rating: 5,
         link: "https://www.tripadvisor.co/ShowUserReviews-g294308-d4403439-r1000072804-Eos_Ecuador-Quito_Pichincha_Province.html"
     },
-    {
+    /*{
         name: "LeslieBrownstyle",
         location: "Rochester, Estado de Nueva York",
         date: "oct de 2024",
@@ -54,12 +54,12 @@ const reviews = [
         text: "EOS travel booked us into excellent accommodation, great locations, spacious, clean and really friendly proprietors. The best part about EOS is that they helped guide us through the COVID crisis and were able to postpone a lot of events without us losing money. Everything was arranged like clockwork and while we were in Ecuador the agency kept in touch with us in case we had any last minute changes. The land tours and boat trips they organized were really interesting and a lot of fun. I would highly recommend EOS and appreciate all they have done for us.",
         rating: 5,
         link: "https://www.tripadvisor.co/Attraction_Review-g294308-d4403439-Reviews-Eos_Ecuador-Quito_Pichincha_Province.html"
-    }
+    }*/
 ];
 
 export default function TripAdvisorReviews() {
     return (
-        <section className="py-32 bg-[var(--background)] relative overflow-hidden">
+        <section className="py-32 bg-background relative overflow-hidden">
             {/* Dynamic Background Elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[var(--color-primary)]/5 to-transparent blur-3xl rounded-full translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-green-500/5 to-transparent blur-3xl rounded-full -translate-x-1/2" />
