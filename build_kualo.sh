@@ -32,67 +32,79 @@ if [ ! -d ".next/standalone" ]; then
   exit 1
 fi
 
-# Crear directorio public en .eos-landing/
+# Crear directorios necesarios
+mkdir -p .eos-landing/.next
 mkdir -p .eos-landing/public
+mkdir -p .eos-landing/public/_next
 
-# Copiar directorios y archivos
+# Copiar directorios y archivos según la estructura solicitada:
 
-# .next/ (el que está en .next/standalone/.next)
+# 1. .next/ (el que está en .next/standalone/.next)
 if [ -d ".next/standalone/.next" ]; then
-  cp -r .next/standalone/.next .eos-landing/.next
-  echo "✅ Copiado .next/"
+  cp -r .next/standalone/.next/* .eos-landing/.next/
+  echo "✅ Copiado contenido de .next/ (desde standalone)"
 fi
 
-# .next/static/ (el que está en .next/static)
+# 2. .next/static (el que está en .next/static de la raíz)
 if [ -d ".next/static" ]; then
   mkdir -p .eos-landing/.next/static
   cp -r .next/static/* .eos-landing/.next/static/
   echo "✅ Copiado .next/static/"
-else
-  echo "⚠️ '.next/static/' no encontrado, ignorando..."
 fi
 
-# node_modules/ (el que está dentro de .next/standalone)
+# 3. node_modules/ (el que está dentro de .next/standalone)
 if [ -d ".next/standalone/node_modules" ]; then
   cp -r .next/standalone/node_modules .eos-landing/node_modules
   echo "✅ Copiado node_modules/"
 fi
 
-# public/ (copiado de la raíz)
+# 4. public/ (Copiado de la raíz)
 if [ -d "public" ]; then
   cp -r public/* .eos-landing/public/
   echo "✅ Copiado public/"
-else
-  echo "⚠️ 'public/' no encontrado en la raíz, ignorando..."
 fi
 
-# public/_next/ (copiado de .eos-landing/.next)
-mkdir -p .eos-landing/public/_next
+# 5. public/_next/ (Copiado de .next/ de este directorio .eos-landing/.next)
 if [ -d ".eos-landing/.next" ]; then
-  cp -a .eos-landing/.next/. .eos-landing/public/_next/
+  # Copiamos el contenido de .eos-landing/.next hacia .eos-landing/public/_next
+  cp -r .eos-landing/.next/* .eos-landing/public/_next/
   echo "✅ Copiado public/_next/ desde .eos-landing/.next"
-else
-  echo "⚠️ '.eos-landing/.next/' no encontrado, ignorando..."
 fi
 
-# package.json (de .next/standalone)
+# 6. package.json (El de .next/standalone)
 if [ -f ".next/standalone/package.json" ]; then
   cp .next/standalone/package.json .eos-landing/package.json
   echo "✅ Copiado package.json"
 fi
 
-# server.js (de .next/standalone)
+# 7. server.js (El de .next/standalone)
 if [ -f ".next/standalone/server.js" ]; then
   cp .next/standalone/server.js .eos-landing/server.js
   echo "✅ Copiado server.js"
 fi
 
-# index.js (de la raíz del proyecto)
+# 8. index.js (El que está en la raíz)
 if [ -f "index.js" ]; then
   cp index.js .eos-landing/index.js
   echo "✅ Copiado index.js"
-else
-  echo "⚠️ 'index.js' no encontrado en la raíz, ignorando..."
 fi
 
-echo "🎉 Proceso finalizado exitosamente. La carpeta '.eos-landing/' está lista."
+# 9. .htaccess para cPanel / Apache
+echo "➡️ Generando .htaccess genérico para cPanel..."
+cat << 'EOF' > .eos-landing/.htaccess
+# Configuración generada para cPanel Node.js
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Si el archivo o directorio existe físicamente (ej. en public/), que Apache lo sirva
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Todo lo demás lo mandamos al servidor Node.js (index.js / Passenger)
+  RewriteRule ^(.*)$ index.js [QSA,L]
+</IfModule>
+EOF
+echo "✅ Generado .htaccess"
+
+echo "🎉 Proceso finalizado exitosamente. La carpeta '.eos-landing/' está lista para subir."
