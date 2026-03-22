@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Deploy kualo
+
+Cómo usar Node 20 en la terminal de Kualo
+
+Debes activar el entorno de la aplicación.
+
+1️⃣ Ve al root de tu app
+cd ~/eos-nextjs
+2️⃣ Activa el entorno de Node que creó cPanel
+
+Ejecuta:
+
+source ~/nodevenv/eos-nextjs/20/bin/activate
+
+(el 20 corresponde a la versión que elegiste en cPanel)
+
+3️⃣ Verifica la versión
+node -v
+
+Ahora debería mostrar algo como:
+
+v20.x.x
+
+
+## PENDING
+
+6. Si usas next/image
+
+En producción, y especialmente con output: "standalone", Next recomienda/require sharp para la optimización de imágenes.
+
+Puedes instalarlo localmente antes del build:
+
+npm install sharp
